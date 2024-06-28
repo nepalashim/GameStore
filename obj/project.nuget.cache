@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZkO+Rp0E+xRICXMjm/Z8nqiwOl20kpWoRcwTGS9M5aZ/edhwLWLuhyyLfzETlO1LcO7q0N1cfTYLYbOWwBNirw==",
+  "success": true,
+  "projectFilePath": "/mnt/HARD DISK/DotNET/GameStore.Api/GameStore.Api.csproj",
+  "expectedPackageFiles": [
+    "/home/ashimn/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.5/microsoft.aspnetcore.app.ref.8.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}

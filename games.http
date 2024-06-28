@@ -1,0 +1,36 @@
+GET http://localhost:5150/games
+
+###
+// the purpose of '###' is to separate the request 
+GET http://localhost:5150/games/4
+
+
+###
+POST http://localhost:5150/games
+//defining content type  so that we can tell our API what kind of content we are seding overthere 
+Content-Type: application/json
+
+{
+    "name":"HeroMurder",
+    "genre":"Kids",
+    "price":19.99,
+    "releaseDate":"2011-12-18"
+}
+//define our payload of our game we are going to create it as per CreateGameDto
+
+###
+//for put endpoint
+PUT http://localhost:5150/games/2
+Content-Type: application/json
+
+{
+    
+    "name":"TotalOverdose",
+    "genre":"Guns",
+    "price":149.9779,
+    "releaseDate":"2033-02-18"
+}
+
+###
+
+DELETE http://localhost:5150/games/2
