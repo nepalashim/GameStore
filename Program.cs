@@ -6,7 +6,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 //actually connecting to sqlite
 
-var connString = "Data Source = GameStore.db"; //connection string
+// var connString = "Data Source = GameStore.db"; //connection string
+
+//appsettings.json file ma Connection String define garepachi we are using builder to get the key of Connection Settings from appsettings.json file
+
+var connString = builder.Configuration.GetConnectionString("GameStore");
 
 builder.Services.AddSqlite<GameStoreContext> (connString);    
 
@@ -116,4 +120,5 @@ app.MapDelete("games/{id}",(int id)=>{
 
 // app.MapGet("/", () => "Hello World!");
 app.MapGamesEndpoints();
+app.MigrateDb();
 app.Run();
