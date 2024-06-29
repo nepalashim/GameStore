@@ -2,7 +2,7 @@ GET http://localhost:5150/games
 
 ###
 // the purpose of '###' is to separate the request 
-GET http://localhost:5150/games/4
+GET http://localhost:5150/games/1
 
 
 ###
@@ -20,17 +20,16 @@ Content-Type: application/json
 
 ###
 //for put endpoint
-PUT http://localhost:5150/games/2
+PUT http://localhost:5150/games/1
 Content-Type: application/json
 
 {
-    
-    "name":"TotalOverdose",
-    "genre":"Guns",
-    "price":149.9779,
+    "name":"Total SIMON RACE ",
+    "genre":"BLOODy",
+    "price":19.9779,
     "releaseDate":"2033-02-18"
 }
 
 ###
 
-DELETE http://localhost:5150/games/2
+DELETE http://localhost:5150/games/2 

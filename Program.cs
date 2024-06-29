@@ -1,8 +1,12 @@
-using GameStore.Api.Dtos;
+using GameStore.Api.Endpoints;
 
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
+
+//Cleaning things just because we moved this into the GamesEndpoints file
+
+/*
 const string GetGameEndpointName ="GetGame";
 
 //defining a very simple list of games
@@ -35,7 +39,13 @@ app.MapGet("games",()=>games);
 //create a request that can be used to retrieve not all games but just one games by ID
  
 //GET /games/1
-app.MapGet("games/{id}",(int id)=>games.Find(game => game.Id ==id))
+app.MapGet("games/{id}",(int id)=>
+{
+    GameDto? game = games.Find(game => game.Id ==id);
+
+    return game is null ? Results.NotFound() : Results.Ok(game);
+    
+    })
     .WithName(GetGameEndpointName);
 
 //endpoint for posting into games
@@ -64,6 +74,12 @@ app.MapPost("games",(CreateGameDto newGame) =>
 app.MapPut("games/{id}",(int id, UpdateGameDto updatedGame )=>
 {
     var index= games.FindIndex(game => game.Id == id);
+
+    if (index== -1)
+    {
+        return Results.NotFound();
+    }
+
     games[index] = new GameDto(
         id,
         updatedGame.Name,
@@ -84,9 +100,9 @@ app.MapDelete("games/{id}",(int id)=>{
     return Results.NoContent();
 }
 );
-    
+    */
 
 
 // app.MapGet("/", () => "Hello World!");
-
+app.MapGamesEndpoints();
 app.Run();
