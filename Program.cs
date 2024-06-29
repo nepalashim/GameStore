@@ -1,8 +1,19 @@
+using GameStore.Api.Data;
 using GameStore.Api.Endpoints;
 
 var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
 
+
+//actually connecting to sqlite
+
+var connString = "Data Source = GameStore.db"; //connection string
+
+builder.Services.AddSqlite<GameStoreContext> (connString);    
+
+// As we are adding .AddSqlite here, entity framework is going to take care of connString
+//then it is going to create and instance of GameStoreContext and it is going to pass in DB Context options over there, that are going to contain all of the details that are in that connection string that can connect to our Database and map the entities to the table
+
+var app = builder.Build();
 
 //Cleaning things just because we moved this into the GamesEndpoints file
 
