@@ -1,6 +1,2 @@
-// database
-GameStore.db 
-
-//http request
-
+GameStore.db
 games.http
