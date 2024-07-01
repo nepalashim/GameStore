@@ -120,5 +120,6 @@ app.MapDelete("games/{id}",(int id)=>{
 
 // app.MapGet("/", () => "Hello World!");
 app.MapGamesEndpoints();
+app.MapGenresEndpoints();
 await app.MigrateDbAsync();
 app.Run();

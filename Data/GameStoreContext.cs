@@ -7,11 +7,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace GameStore.Api.Data
 {
-    public class GameStoreContext (DbContextOptions<GameStoreContext> options) : DbContext(options) //GameStoreContext should be inherited from Db context
+    public class GameStoreContext(DbContextOptions<GameStoreContext> options) : DbContext(options) //GameStoreContext should be inherited from Db context
     {
         public DbSet<Game> Games => Set<Game>();
 
-        public DbSet<Genre> Genre => Set<Genre>();
+        public DbSet<Genre> Genres=> Set<Genre>();
+        
+
+        //public IEnumerable<object> Genres { get; internal set; }
 
         //this is one of the methods that is going to be executed as soon as the migration is executed
 
