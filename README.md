@@ -1,4 +1,4 @@
-# GameStore.Api
+# GamePasal.Api
 
 ## Overview
 
