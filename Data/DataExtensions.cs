@@ -8,11 +8,11 @@ namespace GameStore.Api.Data
 {
     public static class DataExtensions// this method is going to extend webapplication object /class, to migrate our database
     {
-        public static void MigrateDb(this WebApplication app)
+        public static  async Task MigrateDbAsync(this WebApplication app)
         {
             using var scope = app.Services.CreateScope();
             var dbContext = scope.ServiceProvider.GetRequiredService<GameStoreContext>();
-            dbContext.Database.Migrate();
+            await dbContext.Database.MigrateAsync();
             // We are now ready to execute migration on Startup
 
 

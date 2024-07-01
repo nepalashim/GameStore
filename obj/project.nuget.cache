@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "lNOm99ZdZ0CuckU7xTr9AjjbP2f2D5ct9EgCFEluwiRlWFTMo5cQAPVf4X4A2L2RuTtlOYNmYU3GmlwJrvB05w==",
+  "dgSpecHash": "Ne+KcvnuoighxN6fc4f57lghK5kHfXrn6w4XN2pj53Z+x6T9sMYObpj9Rke6yN/ytL5tFwO2Rq8ep/ArfYpPkA==",
   "success": true,
   "projectFilePath": "/mnt/HARD DISK/DotNET/GameStore.Api/GameStore.Api.csproj",
   "expectedPackageFiles": [
@@ -15,7 +15,7 @@
     "/home/ashimn/.nuget/packages/microsoft.entityframeworkcore/8.0.6/microsoft.entityframeworkcore.8.0.6.nupkg.sha512",
     "/home/ashimn/.nuget/packages/microsoft.entityframeworkcore.abstractions/8.0.6/microsoft.entityframeworkcore.abstractions.8.0.6.nupkg.sha512",
     "/home/ashimn/.nuget/packages/microsoft.entityframeworkcore.analyzers/8.0.6/microsoft.entityframeworkcore.analyzers.8.0.6.nupkg.sha512",
-    "/home/ashimn/.nuget/packages/microsoft.entityframeworkcore.design/8.0.6/microsoft.entityframeworkcore.design.8.0.6.nupkg.sha512",
+    "/home/ashimn/.nuget/packages/microsoft.entityframeworkcore.design/8.0.2/microsoft.entityframeworkcore.design.8.0.2.nupkg.sha512",
     "/home/ashimn/.nuget/packages/microsoft.entityframeworkcore.relational/8.0.6/microsoft.entityframeworkcore.relational.8.0.6.nupkg.sha512",
     "/home/ashimn/.nuget/packages/microsoft.entityframeworkcore.sqlite/8.0.6/microsoft.entityframeworkcore.sqlite.8.0.6.nupkg.sha512",
     "/home/ashimn/.nuget/packages/microsoft.entityframeworkcore.sqlite.core/8.0.6/microsoft.entityframeworkcore.sqlite.core.8.0.6.nupkg.sha512",

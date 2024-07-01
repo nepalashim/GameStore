@@ -12,6 +12,21 @@ namespace GameStore.Api.Data
         public DbSet<Game> Games => Set<Game>();
 
         public DbSet<Genre> Genre => Set<Genre>();
+
+        //this is one of the methods that is going to be executed as soon as the migration is executed
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Genre>().HasData(
+                new {Id=1, Name="Fighting"},
+                new {Id=2, Name="Roleplaying"},
+                new {Id=3, Name="Sports"},
+                new {Id=4, Name="Racing"},
+                new {Id=5, Name="Kids and Family"}
+                
+            );
+        }
+
         
     }
 }

@@ -11,10 +11,10 @@ POST http://localhost:5150/games
 Content-Type: application/json
 
 {
-    "name":"HeroMurder",
-    "genre":"Kids",
-    "price":19.99,
-    "releaseDate":"2011-12-18"
+    "name":"Street Chser 3",
+    "genreId":3,
+    "price":32.99,
+    "releaseDate":"2014-12-18"
 }
 //define our payload of our game we are going to create it as per CreateGameDto
 
@@ -24,12 +24,12 @@ PUT http://localhost:5150/games/1
 Content-Type: application/json
 
 {
-    "name":"Total SIMON RACE ",
-    "genre":"BLOODy",
-    "price":19.9779,
+    "name":"Total SIMON RACE Turboo",
+    "genreId":1,
+    "price":18.9779,
     "releaseDate":"2033-02-18"
 }
 
 ###
 
-DELETE http://localhost:5150/games/2 
+DELETE http://localhost:5150/games/4

@@ -12,7 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 var connString = builder.Configuration.GetConnectionString("GameStore");
 
-builder.Services.AddSqlite<GameStoreContext> (connString);    
+builder.Services.AddSqlite<GameStoreContext> (connString);   // this line is registering  our DbContext / GameStoreContext into the service provider, which is a service container and it is doing so with a Scoped life time
 
 // As we are adding .AddSqlite here, entity framework is going to take care of connString
 //then it is going to create and instance of GameStoreContext and it is going to pass in DB Context options over there, that are going to contain all of the details that are in that connection string that can connect to our Database and map the entities to the table
@@ -120,5 +120,5 @@ app.MapDelete("games/{id}",(int id)=>{
 
 // app.MapGet("/", () => "Hello World!");
 app.MapGamesEndpoints();
-app.MigrateDb();
+await app.MigrateDbAsync();
 app.Run();
